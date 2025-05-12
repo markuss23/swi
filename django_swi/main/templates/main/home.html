@@ -11,6 +11,10 @@
                 <h3>{{ item.name }}</h3>
                 <p>{{ item.description }}</p>
                 <small>Created: {{ item.created_at }}</small>
+                <div class="actions">
+                    <a href="{% url 'item_update' item.id %}">Edit</a> | 
+                    <a href="{% url 'item_delete' item.id %}">Delete</a>
+                </div>
             </div>
         {% endfor %}
     {% else %}

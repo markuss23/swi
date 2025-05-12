@@ -1,13 +1,14 @@
 {% extends 'main/base.html' %}
 
-{% block title %}Add Item - SWI App{% endblock %}
+{% block title %}{% if item %}Edit Item{% else %}Add Item{% endif %} - SWI App{% endblock %}
 
 {% block content %}
-    <h2>Add New Item</h2>
+    <h2>{% if item %}Edit Item{% else %}Add New Item{% endif %}</h2>
     
     <form method="post">
         {% csrf_token %}
         {{ form.as_p }}
         <button type="submit">Save</button>
+        <a href="{% url 'home' %}">Cancel</a>
     </form>
 {% endblock %}

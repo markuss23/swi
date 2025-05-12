@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -13,9 +14,11 @@
             max-width: 800px;
             margin: 0 auto;
         }
+
         nav {
             margin-bottom: 20px;
         }
+
         .item {
             border: 1px solid #ddd;
             padding: 10px;
@@ -24,11 +27,12 @@
         }
     </style>
 </head>
+
 <body>
     <header>
         <h1>SWI Application</h1>
         <nav>
-            <a href="{% url 'home' %}">Home</a> | 
+            <a href="{% url 'home' %}">Home</a> |
             <a href="{% url 'item_create' %}">Add Item</a>
         </nav>
     </header>
@@ -36,7 +40,8 @@
         {% block content %}{% endblock %}
     </main>
     <footer>
-        <p>&copy; 2023 SWI App</p>
+        <p>&copy; 2025 SWI App</p>
     </footer>
 </body>
+
 </html>

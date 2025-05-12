@@ -1,0 +1,16 @@
+{% extends 'main/base.html' %}
+
+{% block title %}Delete Item - SWI App{% endblock %}
+
+{% block content %}
+    <h2>Delete Item</h2>
+    <div class="alert alert-warning">
+        <p>Are you sure you want to delete "{{ item.name }}"?</p>
+    </div>
+    
+    <form method="post">
+        {% csrf_token %}
+        <button type="submit" class="btn btn-danger">Yes, Delete</button>
+        <a href="{% url 'home' %}" class="btn btn-secondary">Cancel</a>
+    </form>
+{% endblock %}
